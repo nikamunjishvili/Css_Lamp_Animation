@@ -1,0 +1,160 @@
+body {
+    background: rgb(0, 49, 20);
+    background: radial-gradient(circle,
+            rgba(0, 49, 20, 1) 10%,
+            rgba(0, 16, 8, 1) 25%,
+            rgba(0, 0, 0, 1) 100%);
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    color: #00ff73;
+}
+
+.lamp {
+    height: 23rem;
+    width: 12rem;
+    position: relative;
+    background: rgb(36, 154, 97);
+    background: linear-gradient(90deg,
+            rgba(36, 154, 97, 1) 10%,
+            rgba(56, 170, 113, 1) 30%,
+            rgba(36, 154, 97, 1) 55%);
+    clip-path: polygon(30% 0, 70% 0, 100% 65%, 70% 100%, 30% 100%, 0 65%);
+    z-index: 20;
+    border-radius: 50%;
+}
+
+.top-cover,
+.bottom-cover {
+    width: 100%;
+    height: 17.5%;
+    position: absolute;
+}
+
+.top-cover {
+    background: rgb(24, 24, 24);
+    background: linear-gradient(90deg,
+            rgba(24, 24, 24, 1) 30%,
+            rgba(37, 41, 36, 1) 45%,
+            rgba(24, 24, 24, 1) 100%);
+}
+
+.bottom-cover {
+    background: rgb(35, 40, 33);
+    background: linear-gradient(90deg,
+            rgba(35, 40, 33, 1) 25%,
+            rgba(42, 50, 41, 1) 45%,
+            rgba(35, 40, 33, 1) 63%);
+    top: 85%;
+}
+
+.lamp-bottom {
+    width: 0;
+    height: 0;
+    border-left: 6rem solid transparent;
+    border-right: 6rem solid transparent;
+    border-top: 6rem solid rgba(35, 40, 33, 1);
+    border-radius: 50%;
+    transform: rotate(180deg);
+    position: absolute;
+    top: 70%;
+}
+
+.blob1,
+.blob2,
+.blob3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: #00ff73;
+    z-index: -1;
+}
+
+.blob1 {
+    width: 150px;
+    animation: move 8s ease-in-out infinite;
+    transform-origin: 25% 75%;
+}
+
+.blob2 {
+    width: 200px;
+    animation: move 5s ease-in-out infinite;
+    transform-origin: 50% 50%;
+}
+
+.blob3 {
+    width: 175px;
+    animation: move 10s ease-in-out infinite;
+    transform-origin: 10% 60%;
+}
+
+.bubble1,
+.bubble2,
+.bubble3 {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(0, 40, 16, 0.1);
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    z-index: -10;
+}
+
+.bubble1 {
+    tranform-origin: 30% 50%;
+    animation: bubbly 15s ease infinite;
+}
+
+.bubble2 {
+    tranform-origin: 10% 70%;
+    animation: bubbly 10s ease-in-out infinite;
+}
+
+.bubble3 {
+    tranform-origin: 50% 30%;
+    animation: bubbly 12s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: scale(0.25) translate(10px, -30px);
+    }
+
+    40% {
+        transform: scale(0.35, 0.45) translate(180px, 300px) rotate(180deg);
+    }
+
+    80% {
+        transform: scale(0.35) translate(0, 50px) rotate(-20deg);
+    }
+
+    100% {
+        transform: scale(0.25) translate(10px, -30px);
+    }
+}
+
+@keyframes bubbly {
+    0% {
+        transform: translate(-50px, -50px);
+    }
+
+    25% {
+        transform: translate(30px, 100px);
+    }
+
+    75% {
+        transform: translate(60px, -30px);
+    }
+
+    100% {
+        transform: translate(-50px, -50px);
+    }
+}
+Write to
